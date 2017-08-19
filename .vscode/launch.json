@@ -5,7 +5,18 @@
       "type": "node",
       "request": "launch",
       "name": "start node",
-      "program": "${workspaceRoot}/simpleWebServer.js"
+      "program": "${workspaceRoot}/simpleWebServer.js",
+      "args": [
+        
+      ],
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
     }
   ],
   "compounds": []
