@@ -4,12 +4,19 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "start node",
-      "program": "${workspaceRoot}/simpleWebServer.js",
+      "name": "start client",
+      "program": "${workspaceRoot}/src/Chap5-Web/simpleWebClient",
+      "runtimeExecutable": "node"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "start server",
+      "program": "${workspaceRoot}/src/Chap5-Web/simpleWebServer",
       "args": [
         
       ],
-      "cwd": "${workspaceRoot}",
+      "cwd": "",
       "runtimeExecutable": "node",
       "runtimeArgs": [
         

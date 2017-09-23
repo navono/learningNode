@@ -7,12 +7,13 @@ const postData = queryString.stringify({
 
 const options = {
   hostname: 'localhost',
-  port: 8214,
+  port: 8989,
   method: 'POST',
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Content-Length': postData.length
   },
+  // 禁用 http.Agent 的 socket 池
   agent: false
 };
 
