@@ -30,6 +30,9 @@ server.on('request', function(request, response) {
 8. 等待下一个请求
 
 
+一般我们访问网站时不需要指定端口是因为，有两个被固定使用的端口：
+- HTTP使用的是 80
+- HTTPS使用的是 443
 
 
 # Using Apache to Proxy a Node App
