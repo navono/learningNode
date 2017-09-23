@@ -1,12 +1,18 @@
 const http = require('http'),
+  url = require('url'),
   fs = require('fs'),
+  mime = require('mime'),
+  path = require('path'),
   base = 'D:\\Sourcecode\\JavaScriptGitRepo\\learningNode\\src\\Chap5-Web\\html';
 
 /* eslint-disable no-alert, no-console */
 http.createServer((req, res) => {
-  const pathname = `${base}/${req.url}`;
+  const pathname = path.normalize(`${base}/${req.url}`);
   console.log(pathname);
-  res.setHeader('Content-type', 'text/html');
+
+  // content type
+  const type = mime.getType(pathname);
+  res.setHeader('Content-type', type);
 
   fs.stat(pathname, (err, stats) => {
     console.log(stats);

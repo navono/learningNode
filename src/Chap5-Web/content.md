@@ -34,6 +34,12 @@ server.on('request', function(request, response) {
 - HTTP使用的是 80
 - HTTPS使用的是 443
 
+## mime
+- ES6 support required (node@>=6)
+- lookup() renamed to getType()
+- extension() renamed to getExtension()
+- charset() and load() methods have been removed
+
 
 # Using Apache to Proxy a Node App
 
