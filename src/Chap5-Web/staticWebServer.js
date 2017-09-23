@@ -3,25 +3,22 @@ const http = require('http'),
   fs = require('fs'),
   mime = require('mime'),
   path = require('path'),
-  base = 'D:\\Sourcecode\\JavaScriptGitRepo\\learningNode\\src\\Chap5-Web\\html';
+  base = `${__dirname}\\html`;
 
 /* eslint-disable no-alert, no-console */
 http.createServer((req, res) => {
-  const pathname = path.normalize(`${base}/${req.url}`);
-  console.log(pathname);
-
-  // content type
-  const type = mime.getType(pathname);
-  res.setHeader('Content-type', type);
-
+  const pathname = path.normalize(`${base}\\${req.url}`);
   fs.stat(pathname, (err, stats) => {
-    console.log(stats);
     if (err) {
       console.log(err);
       res.writeHead(400);
       res.write('Resource missing 404\n');
       res.end();
-    } else {
+    } else if (stats.isFile()) {
+      // content type
+      const type = mime.getType(pathname);
+      res.setHeader('Content-type', type);
+
       // create and pipe readable stream
       const file = fs.createReadStream(pathname);
       file.on('open', () => {
@@ -35,6 +32,11 @@ http.createServer((req, res) => {
         res.write('file missing, or permission problem');
         console.log(err);
       });
+    } else {
+      // directory
+      res.writeHead(403);
+      res.write('Directory access is forbidden');
+      res.end();
     }
   });
 }).listen(8989);
