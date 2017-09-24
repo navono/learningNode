@@ -42,11 +42,11 @@ server.on('request', function(request, response) {
 
 
 # Using Apache to Proxy a Node App
-
+省略。使用Nginx
 
 
 # Query String
-
+querystring可以将对象或者字符串转出对立的格式。比如可以将对象转换成字符串格式。把字符串转出想要的对象格式。
 
 
 # DNS Resolution
