@@ -50,3 +50,5 @@ querystring可以将对象或者字符串转出对立的格式。比如可以将
 
 
 # DNS Resolution
+- dns.lookup()
+- dns.resolve
