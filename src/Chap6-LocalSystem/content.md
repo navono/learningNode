@@ -12,7 +12,7 @@ Node中的流有以下基本功能：
 - 可以暂停或者恢复流
 - 可以在可读流或者可写流进行pipe化
 
-
+一个流即可写又可读，称之为`双工流（duplex stream）`。双工流有一个变体，称之为`transform`。
 
 
 # File System
