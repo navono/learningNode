@@ -15,6 +15,31 @@ Node中的流有以下基本功能：
 一个流即可写又可读，称之为`双工流（duplex stream）`。双工流有一个变体，称之为`transform`。
 
 
+可读流支持几种事件，其中最主要的是：
+- data
+- end
+- error
+
+
+可写事件支持：
+- error
+- finish
+- drain
+
+
+可读写的双工流。有独立的输入和输出缓冲区。但是`transform`流却不是这样。`transform`流是将输入，进行某种转换，然后输出。因此必须实现一个`_transform()`函数。fs.ReadStream的`pipe`就是一个例子。看看Zlib压缩的例子：
+```js
+const gzip = zlib.createGzip();
+const fs = require('fs');
+const in = fs.createReadStream('input.txt');
+let out = fs.createWriteStream('input.txt.gz');
+
+in.pipe(gzip).pipe(out);
+```
+
+
+
+
 # File System
 
 
