@@ -38,10 +38,36 @@ in.pipe(gzip).pipe(out);
 ```
 
 
-
-
 # File System
+Node的文件系统支持4个类：
+- fs.FSWatcher
+- fs.ReadStream
+- fs.WriteStream
+- fs.Stats
 
+
+因为原生的FSWatcher有缺陷。因此建议使用`Chokidar`。
+
+
+可读流创建时的默认选项：
+```js
+{
+  flags; 'r',
+  encoding: null,
+  fd: null,
+  mode: 0o666,
+  autoClose: true
+}
+```
+
+可写流创建时的默认选项：
+```js
+{
+  flags: 'w',
+  defaultEncoding: 'utf-8',
+  fd: null,
+  mode: 0o666
+}
 
 
 # Path

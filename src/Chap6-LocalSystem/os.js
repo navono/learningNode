@@ -1,6 +1,7 @@
 const os = require('os');
-
 /* eslint-disable no-console */
+
+
 console.log(`Using end of line ${os.EOL} to insert a new line`);
 console.log(os.endianness());
 console.log(os.tmpdir());
