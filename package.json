@@ -21,6 +21,7 @@
     "lint-staged": "^4.2.2",
     "mime": "^2.0.2",
     "precommit": "^1.2.2",
-    "stat-mode": "^0.2.2"
+    "stat-mode": "^0.2.2",
+    "zlib": "^1.0.5"
   }
 }
