@@ -30,3 +30,5 @@ req.on('error', e => {
 // stream gzipped file to server
 const readable = fs.createReadStream('E:\\images\\Dragon.jpg');
 readable.pipe(gzip).pipe(req);
+
+/* eslint-enable no-console */

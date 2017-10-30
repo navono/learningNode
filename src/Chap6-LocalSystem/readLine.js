@@ -25,3 +25,5 @@ rl.on('line', function(cmd) {
 rl.on('close', function() {
   closeInterface();
 });
+
+/* eslint-enable no-console */

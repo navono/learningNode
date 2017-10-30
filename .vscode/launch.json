@@ -5,7 +5,7 @@
       "type": "node",
       "request": "launch",
       "name": "test",
-      "program": "${workspaceRoot}/src/Chap6-LocalSystem/fs2"
+      "program": "${workspaceRoot}/src/Chap7-Networking/tcpServer"
     },
     {
       "type": "node",
