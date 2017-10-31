@@ -14,4 +14,5 @@ process.stdin.on('data', data => {
     });
 });
 
+
 /* eslint-enable no-console, no-unused-vars */

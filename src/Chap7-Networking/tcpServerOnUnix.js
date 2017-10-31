@@ -1,5 +1,4 @@
 /* eslint-disable no-console, no-unused-vars*/
-
 const net = require('net');
 const fs = require('fs');
 
@@ -40,5 +39,6 @@ server.on('error', err => {
 process.on('uncaughtException', err => {
   console.log(err);
 });
+
 
 /* eslint-enable no-console, no-unused-vars */

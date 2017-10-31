@@ -1,5 +1,4 @@
 /* eslint-disable no-console, no-unused-vars*/
-
 const net = require('net');
 const PORT = 6666;
 
@@ -35,5 +34,6 @@ server.on('error', err => {
     console.error(err);
   }
 });
+
 
 /* eslint-enable no-console, no-unused-vars */
